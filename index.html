@@ -22,11 +22,74 @@
 
         </div>
     </div>
+    <div id="transection-area">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="Deposit shadow">
+                            <h5>Deposit</h5>
+                            <h4>$<span id="currenDeposit"> 00</span></h4>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 ">
+                    <div class="Withdrow shadow ">
+                        <h5>Withdrow</h5>
+                        <h4>$ 00</h4>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 ">
+                    <div class="Balance shadow">
+                        <h5>Balance</h5>
+                        <h4>$ 1240</h4>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="submit-area">
+                        <h4>Deposit</h4>
+                        <input id="depositAmount" type="text" class="form-control" placeholder="$ amount you want to Deposit">
+                        <br>
+                        <button class="btn btn-success" id="Deposit">Deposit</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="submit-area">
+                        <h4>Withdraw</h4>
+                        <input id="withdrqawAmount" type="text" class="form-control" placeholder="$ amount you want to withdraw">
+                        <br>
+                        <button class="btn btn-success" id="Withdraw">Withdraw</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+    </div>
     <script>
+        // login Button event handeller 
         const loginbtn = document.getElementById('login');
         loginbtn.addEventListener('click', function(){
             const logInArea = document.getElementById('Area');
             logInArea.style.display = 'none';
+            const transectionArea = document.getElementById('transection-area');
+            transectionArea.style.display = 'block';
+        })
+
+        // Dipossit Button handeller
+        const dipositBtn =document.getElementById('Deposit');
+        dipositBtn.addEventListener('click', function(){
+            const depositAmounte= document.getElementById('depositAmount').value;
+            const dipositNumber = parseFloat(depositAmounte);
+            
+            const currenDeposit=document.getElementById('currenDeposit').innerText;
+            const currentValue=parseFloat(currenDeposit);
+            const totalDeposit=dipositNumber+currentValue;
+
+            document.getElementById('currenDeposit').innerText = totalDeposit;
+            
         })
     </script>
     

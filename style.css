@@ -7,3 +7,21 @@ body{
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
 }
+#transection-area{
+    display: none;
+}
+.shadow{
+    margin: 0 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.Deposit{
+background-color: slateblue;
+}
+.Withdrow{
+background-color: lightsalmon;
+}
+.Balance{
+background-color: orange;
+}
